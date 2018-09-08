@@ -1,0 +1,18 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="container">
+  <div class="row">
+    <div class="col s4">
+      <div class="wrapper-btn"
+      *ngFor="let item of btnArr">
+        <app-card-btn [title]="item.title" [body]="item.body" [id]="item.id" (onChangedWidget)="changeCurrentWidget($event)"></app-card-btn>
+      </div>
+    </div>
+    <div class="col s8">
+      <app-card-view [image]="curentwidget.image"
+                     [bodyWidget]="curentwidget.bodyWidget"
+                     [titleWidget]="curentwidget.titleWidget"></app-card-view>
+    </div>
+  </div>
+</div>
+
+
